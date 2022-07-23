@@ -1,0 +1,238 @@
+html{
+    font-size: 62.5%;
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&display=swap');
+    overflow-x: hidden;
+}
+
+*{
+    transition: .2s ease-in-out;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    background:#eee;
+}
+
+//variables declaration
+
+$title: 'Ibarra Real Nova', serif;
+$title-sm:'Raleway', sans-serif;
+$paragraph : 'Quicksand', sans-serif;
+$green-light:#ADE544;
+$shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;;
+$shadow-sm:0 .125rem .25rem rgba(0,0,0,.075) !important;
+$background-color:#eee;
+
+//variable declaration
+
+.site-logo{
+    width: 2rem;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: $title;
+    font-weight: bold;
+    padding: 3rem 2rem;
+    box-shadow: $shadow-sm;
+    row-gap: .2rem;
+    background: #fff;
+    .title{
+        line-height: 1;
+        font-size: 2.5rem;
+        word-spacing: .2rem;
+        span{
+            color: $green-light;
+        }
+    }
+}
+
+.cart{
+    margin: 2rem 3rem;
+    h2{
+        font-size: 1.9rem;
+        font-family: $title;
+        span{
+            color: green;
+            font-family: $title-sm;
+        }
+    }
+}
+.suggestions{
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1rem;
+    margin: 2rem 0;
+    p{
+        font-family: $title-sm;
+        font-size: 2.5rem;
+        color: #333;
+        line-height: 1.5rem;
+        span{
+            color: $green-light;
+        }
+    }
+}
+
+.products-section{
+    padding: 2rem 1rem;
+    img{
+        width: 22rem;
+        object-fit: cover;
+    }
+    .section__products{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(20rem,40rem));
+        margin: 2rem 1rem;
+        justify-content: center;
+        align-items: center;
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 1.7rem;
+            padding:2rem 1rem ;
+            margin: 1rem 1rem;
+            gap: 2rem;
+            box-shadow: $shadow-sm;
+            &:hover{
+                img{
+                    transform: scale(1.2);
+                }
+            }
+            h3{
+                font-family: $title-sm;
+                font-weight: bold;
+                font-size: 2rem;
+                line-height: 1rem;
+                padding: 2rem 0;
+                text-align: center;
+            }
+            a{
+                font-family: $title-sm;
+                font-size: 1.8rem;
+                color: #fff;
+                background: green;
+                padding: 1rem;
+                line-height: 1;
+                border-radius: .2rem;
+                margin-bottom: 1rem;
+            }
+            .card-icons{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                margin: 2rem 0;
+                .waterfire{
+                    font-size: 2rem;
+                    span{
+                        line-height: 1;
+                        .water{
+                            color: #1BE7FF;
+                        }
+                        .sun{
+                            color: #F79824;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem ;
+    background-color: green;
+    &_first{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: $title;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #fff;
+        gap: 1rem;
+        margin: 1.5rem 1rem;
+    }
+    &_second{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: $title;
+        font-weight: bold;
+        form{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            input{
+                width:30rem ;
+                height: 3.5rem;
+                padding: .6rem .5rem;
+            }
+            input[type="submit"]{
+                width:15rem ;
+            }
+        }
+    }
+    &_third{
+        p{
+            text-align: center;
+            margin: 1rem .5rem;
+            font-family: $paragraph;
+            font-size: 1.9rem;
+            color: #fff;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .suggestions{
+        p{
+            font-size: 1.6rem;
+            margin: 1rem 1rem;
+        }
+    }
+    .footer{
+        &_second{
+            form{
+                input{
+                    width:15rem ;
+                }
+                input[type="submit"]{
+                    width:7rem ;
+                }
+            }
+        }
+    }
+    .products-section{
+        padding: 2rem 1rem;
+        img{
+            width: 15rem;
+            object-fit: cover;
+        }
+    }
+}

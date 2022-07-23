@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&display=swap");
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  text-decoration: none;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+}
+
+.site-logo {
+  width: 2rem;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: bold;
+  padding: 3rem 2rem;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  row-gap: .2rem;
+  background: #fff;
+}
+
+.header .title {
+  line-height: 1;
+  font-size: 2.5rem;
+  word-spacing: .2rem;
+}
+
+.header .title span {
+  color: #ADE544;
+}
+
+.cart {
+  margin: 2rem 3rem;
+}
+
+.cart h2 {
+  font-size: 1.9rem;
+  font-family: "Ibarra Real Nova", serif;
+}
+
+.cart h2 span {
+  color: green;
+  font-family: "Raleway", sans-serif;
+}
+
+.suggestions {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 1rem;
+  margin: 2rem 0;
+}
+
+.suggestions p {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  line-height: 1.5rem;
+}
+
+.suggestions p span {
+  color: #ADE544;
+}
+
+.products-section {
+  padding: 2rem 1rem;
+}
+
+.products-section img {
+  width: 22rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products-section .section__products {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 40rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 40rem));
+  margin: 2rem 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products-section .section__products .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-radius: 1.7rem;
+  padding: 2rem 1rem;
+  margin: 1rem 1rem;
+  gap: 2rem;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.products-section .section__products .card:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.products-section .section__products .card h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.products-section .section__products .card a {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+  background: green;
+  padding: 1rem;
+  line-height: 1;
+  border-radius: .2rem;
+  margin-bottom: 1rem;
+}
+
+.products-section .section__products .card .card-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+}
+
+.products-section .section__products .card .card-icons .waterfire {
+  font-size: 2rem;
+}
+
+.products-section .section__products .card .card-icons .waterfire span {
+  line-height: 1;
+}
+
+.products-section .section__products .card .card-icons .waterfire span .water {
+  color: #1BE7FF;
+}
+
+.products-section .section__products .card .card-icons .waterfire span .sun {
+  color: #F79824;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  background-color: green;
+}
+
+.footer_first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+  gap: 1rem;
+  margin: 1.5rem 1rem;
+}
+
+.footer_second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: bold;
+}
+
+.footer_second form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer_second form input {
+  width: 30rem;
+  height: 3.5rem;
+  padding: .6rem .5rem;
+}
+
+.footer_second form input[type="submit"] {
+  width: 15rem;
+}
+
+.footer_third p {
+  text-align: center;
+  margin: 1rem .5rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.9rem;
+  color: #fff;
+}
+
+@media all and (max-width: 768px) {
+  .suggestions p {
+    font-size: 1.6rem;
+    margin: 1rem 1rem;
+  }
+  .footer_second form input {
+    width: 15rem;
+  }
+  .footer_second form input[type="submit"] {
+    width: 7rem;
+  }
+  .products-section {
+    padding: 2rem 1rem;
+  }
+  .products-section img {
+    width: 15rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+/*# sourceMappingURL=App.css.map */
