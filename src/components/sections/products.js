@@ -1,8 +1,8 @@
 import ShoppingList from '../cartList';
-function ProductsSection(){
+function ProductsSection({cart,updateCart}){
     return (
         <div className="section products-section">
-            <ShoppingList/>
+            <ShoppingList cart={cart} updateCart={updateCart}/>
         </div>
     )
 }

@@ -1,25 +1,27 @@
 import CareScale from "./careScale"
-import React from "react"
+import React, {useEffect} from "react"
 
 
-function Data(props){
-    function handleClick(event){
-        event.preventDefault()
-        console.log(`you asked for ${props.title}`);
+function Data({cart,updateCart,title,light,name,img,water,price}){
+    function manageCart(){
+        updateCart(price + cart)
     }
+    useEffect(()=>(
+        localStorage.setItem("cart", JSON.stringify(cart),[cart])
+    ))
     return (
         <div className="card flower-card">
-            <img src={props.img} alt={props.name} className="card-img" loading="lazy"></img>
+            <img src={img} alt={name} className="card-img" loading="lazy"></img>
             <div className="pricetitle">
-                <h3>{props.title}</h3>
+                <h3>{title}</h3>
                 <div className="card-icons">
-                    <CareScale careType='light' scaleValue={props.light} />
-                    <CareScale careType='water' scaleValue={props.water} />
+                    <CareScale careType='light' scaleValue={light} />
+                    <CareScale careType='water' scaleValue={water} />
                 </div>
-                <a href="/home" onClick={(e)=>{handleClick(e)}}>shop now ${props.price}</a>
+                <a href="#" onClick={()=>{manageCart()}}>shop now ${price}</a>
             </div>
         </div>
     )
 }
 
-export default Data
+export default Data;

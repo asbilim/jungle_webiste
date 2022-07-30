@@ -93,13 +93,15 @@ const plantList = [
 	}
 ]
 
-function ShoppingList(){
+
+
+function ShoppingList({cart,updateCart}){
 	
     return (
         <div className="section__products">
             {
-				plantList.map((val)=>(
-					<Data img={val.cover} title={val.name} light={val.light} water={val.water} name={val.name} price={val.price}/>
+				plantList.map((val,i)=>(
+					<Data key={i}   img={val.cover} title={val.name} light={val.light} water={val.water} name={val.name} price={val.price} cart={cart} updateCart={updateCart}/>
 				))
             }
         </div>

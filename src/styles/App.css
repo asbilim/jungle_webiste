@@ -196,6 +196,16 @@ body {
   color: #F79824;
 }
 
+.cart-button {
+  background: green;
+  color: #fff;
+  padding: 1.5rem 4rem;
+  border-radius: 1rem;
+  line-height: 1;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
